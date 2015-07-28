@@ -8,9 +8,9 @@
       "email": "beau@dflydev.com"
     }
   ],
-  "autoload-dev": {
+  "autoload": {
     "psr-4": {
-      "Monii\\Unit\\": "src/unit"
+      "Monii\\AggregateEventStorage\\": "src/Monii/AggregateEventStorage"
     }
   },
   "require-dev": {
