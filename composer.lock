@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b70d89ae32bc69f0f8b0e0a5ed895c5",
+    "hash": "f3a68a25fc297d0f84607482fca00cc2",
     "packages": [],
     "packages-dev": [
         {
@@ -60,6 +60,52 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "monii/aggregate-event-storage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:monii/monii-aggregate-event-storage.git",
+                "reference": "d01e25feab82683599838ba1d7958fe5121b8476"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monii/monii-aggregate-event-storage/zipball/d01e25feab82683599838ba1d7958fe5121b8476",
+                "reference": "d01e25feab82683599838ba1d7958fe5121b8476",
+                "shasum": ""
+            },
+            "require-dev": {
+                "monii/aggregate-event-storage-testing": "dev-master",
+                "phpunit/phpunit": "^4.7",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Monii\\AggregateEventStorage\\": "src/Monii/AggregateEventStorage"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Monii\\AggregateEventStorage\\": "vendor/monii/aggregate-event-storage-testing/src/unit/Monii/AggregateEventStorage"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com"
+                }
+            ],
+            "description": "Aggregate Event Storage",
+            "support": {
+                "source": "https://github.com/monii/monii-aggregate-event-storage/tree/master",
+                "issues": "https://github.com/monii/monii-aggregate-event-storage/issues"
+            },
+            "time": "2015-07-29 17:25:31"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -1035,7 +1081,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "monii/aggregate-event-storage": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
