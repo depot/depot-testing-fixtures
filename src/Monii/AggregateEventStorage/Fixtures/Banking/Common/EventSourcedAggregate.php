@@ -10,6 +10,8 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
 
     private $handledEvents = [];
 
+    private $committedEvents = [];
+
     protected function __construct()
     {
     }
@@ -28,6 +30,10 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
      */
     public function clearAggregateChanges()
     {
+        $this->committedEvents = array_merge(
+            $this->committedEvents,
+            $this->recordedEvents
+        );
         $this->recordedEvents = [];
     }
 
@@ -55,6 +61,8 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
             if (! $event instanceof BankingEventEnvelope) {
                 throw new \InvalidArgumentException('Cannot reconstitute from an unexpected event type.');
             }
+
+            $this->committedEvents[] = $event;
 
             $this->handle($event->getAggregateEvent());
         }
@@ -87,5 +95,10 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
     public function getHandledEvents()
     {
         return $this->handledEvents;
+    }
+
+    public function getCommittedEvents()
+    {
+        return $this->committedEvents;
     }
 }
