@@ -12,7 +12,7 @@ class BankingEventEnvelope implements AggregateChangeReader
 
     private function __construct($eventId, $event, $metadata = null)
     {
-        $this->eventId;
+        $this->eventId = $eventId;
         $this->event = $event;
         $this->metadata = $metadata;
     }
@@ -22,9 +22,9 @@ class BankingEventEnvelope implements AggregateChangeReader
         return new self($eventId, $event, $metadata);
     }
 
-    public static function instantiateAggregateChangeFromEventAndMetadata($event, $metadata = null)
+    public static function instantiateAggregateChangeFromEventAndMetadata($eventId, $event, $metadata = null)
     {
-        return new self($event, $metadata);
+        return new self($eventId, $event, $metadata);
     }
 
     /**
