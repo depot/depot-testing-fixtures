@@ -19,11 +19,6 @@ abstract class PersistenceTest extends TestCase
      */
     private $contractResolver;
 
-    /**
-     * @var array
-     */
-    private $fixtures;
-
     public function setUp()
     {
         parent::setUp();
