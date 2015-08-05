@@ -17,7 +17,7 @@ class Post
     private $tags;
 
     /**
-     * @var array
+     * @var Comment[]
      */
     private $comments;
 
