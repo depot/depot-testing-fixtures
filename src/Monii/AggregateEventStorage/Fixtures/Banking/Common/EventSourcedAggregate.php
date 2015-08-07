@@ -12,6 +12,8 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
 
     private $committedEvents = [];
 
+    private $playhead = -1;
+
     protected function __construct()
     {
     }
@@ -21,6 +23,7 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
      */
     protected function recordEvent($eventId, $event)
     {
+        $this->playhead++;
         $this->recordedEvents[] = BankingEventEnvelope::create($eventId, $event);
         $this->handle($event);
     }
@@ -50,6 +53,11 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
      */
     abstract public function getAggregateIdentity();
 
+    public function getAggregateVersion()
+    {
+        return $this->playhead;
+    }
+
     /**
      * @param array|BankingEventEnvelope[] $events
      *
@@ -58,6 +66,7 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
     public function reconstituteAggregateFrom(array $events)
     {
         foreach ($events as $event) {
+            $this->playhead++;
             if (! $event instanceof BankingEventEnvelope) {
                 throw new \InvalidArgumentException('Cannot reconstitute from an unexpected event type.');
             }
