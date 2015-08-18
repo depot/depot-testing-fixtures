@@ -6,12 +6,24 @@ use Monii\AggregateEventStorage\Aggregate\Support\AggregateEventStorage;
 
 abstract class EventSourcedAggregate implements AggregateEventStorage
 {
+    /**
+     * @var array
+     */
     private $recordedEvents = [];
 
+    /**
+     * @var array
+     */
     private $handledEvents = [];
 
+    /**
+     * @var array
+     */
     private $committedEvents = [];
 
+    /**
+     * @var int
+     */
     private $playhead = -1;
 
     protected function __construct()
