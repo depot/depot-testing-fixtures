@@ -6,9 +6,24 @@ use Monii\AggregateEventStorage\Aggregate\Support\ChangeReading\AggregateChangeR
 
 class BankingEventEnvelope implements AggregateChangeReading
 {
+    /**
+     * @var object
+     */
     public $event;
+
+    /**
+     * @var null
+     */
     public $metadata;
+
+    /**
+     * @var string
+     */
     public $eventId;
+
+    /**
+     * @var int
+     */
     public $version;
 
     private function __construct($eventId, $event, $metadata = null, $version = null)
