@@ -2,6 +2,7 @@
 
 namespace Monii\AggregateEventStorage\Fixtures\Banking\Common;
 
+use DateTimeImmutable;
 use Monii\AggregateEventStorage\Aggregate\Support\ChangeReading\AggregateChangeReading;
 
 class BankingEventEnvelope implements AggregateChangeReading
@@ -17,6 +18,11 @@ class BankingEventEnvelope implements AggregateChangeReading
     public $metadata;
 
     /**
+     * @var DateTimeImmutable
+     */
+    public $when;
+
+    /**
      * @var string
      */
     public $eventId;
@@ -26,10 +32,11 @@ class BankingEventEnvelope implements AggregateChangeReading
      */
     public $version;
 
-    private function __construct($eventId, $event, $metadata = null, $version = null)
+    private function __construct($eventId, $event, $when, $metadata = null, $version = null)
     {
         $this->eventId = $eventId;
         $this->event = $event;
+        $this->when = $when;
         $this->metadata = $metadata;
         $this->version = null;
     }
@@ -42,11 +49,12 @@ class BankingEventEnvelope implements AggregateChangeReading
     public static function instantiateAggregateChangeFromEventAndMetadata(
         $eventId,
         $event,
+        $when,
         $metadata = null,
         $version = null
     )
     {
-        return new self($eventId, $event, $metadata, $version);
+        return new self($eventId, $event, $when, $metadata, $version);
     }
 
     /**
@@ -95,5 +103,13 @@ class BankingEventEnvelope implements AggregateChangeReading
     public function getAggregateEventVersion()
     {
         return $this->version;
+    }
+
+    /**
+     * @return DateTimeImmutable
+     */
+    public function getAggregateEventWhen()
+    {
+        return $this->when;
     }
 }
