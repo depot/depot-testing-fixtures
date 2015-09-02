@@ -59,7 +59,8 @@ abstract class PersistenceTest extends TestCase
             $this->getContractResolver()->resolveFromObject($event),
             $eventId,
             $event,
-            $version
+            $version,
+            new \DateTimeImmutable('2016-01-01 14:55:00')
         );
     }
 

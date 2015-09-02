@@ -32,29 +32,29 @@ class BankingEventEnvelope implements AggregateChangeReading
      */
     public $version;
 
-    private function __construct($eventId, $event, $metadata = null, $when = null, $version = null)
+    private function __construct($eventId, $event, $when = null, $metadata = null, $version = null)
     {
         $this->eventId = $eventId;
         $this->event = $event;
-        $this->metadata = $metadata;
         $this->when = (is_null($when)) ? new DateTimeImmutable('now') : $when;
+        $this->metadata = $metadata;
         $this->version = null;
     }
 
-    public static function create($eventId, $event, $metadata = null)
+    public static function create($eventId, $event, $when = null, $metadata = null, $version = null)
     {
-        return new self($eventId, $event, $metadata);
+        return new self($eventId, $event, $when, $metadata, $version);
     }
 
     public static function instantiateAggregateChangeFromEventAndMetadata(
         $eventId,
         $event,
-        $metadata = null,
         $when = null,
+        $metadata = null,
         $version = null
     )
     {
-        return new self($eventId, $event, $metadata, $when, $version);
+        return new self($eventId, $event, $when, $metadata, $version);
     }
 
     /**
