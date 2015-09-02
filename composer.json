@@ -28,5 +28,8 @@
     "branch-alias": {
       "dev-master": "0.0.x-dev"
     }
+  },
+  "require": {
+    "monii/reflection-properties-serializer": "@dev"
   }
 }

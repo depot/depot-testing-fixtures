@@ -4,8 +4,71 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f216e56392fa355b74872c7db4f570a8",
-    "packages": [],
+    "hash": "7bd7b709f9b73d01732652dab7e6bfb3",
+    "packages": [
+        {
+            "name": "monii/reflection-properties-serializer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monii/monii-reflection-properties-serializer.git",
+                "reference": "30e1b50f6ef528fdc10d6bc468114e55f76f05fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monii/monii-reflection-properties-serializer/zipball/30e1b50f6ef528fdc10d6bc468114e55f76f05fb",
+                "reference": "30e1b50f6ef528fdc10d6bc468114e55f76f05fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monii\\Serialization\\ReflectionPropertiesSerializer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com"
+                },
+                {
+                    "name": "monii.io",
+                    "email": "team@monii.com"
+                },
+                {
+                    "name": "Steve Marks",
+                    "email": "steve.marks@monii.com"
+                },
+                {
+                    "name": "Alec Charlton",
+                    "email": "alec.charlton@monii.com"
+                }
+            ],
+            "description": "Reflection Properties Serializer",
+            "keywords": [
+                "properties",
+                "reflection",
+                "serializer"
+            ],
+            "time": "2015-08-29 03:04:16"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -71,7 +134,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monii/monii-aggregate-event-storage/zipball/0ae3062f670eb87f7829bb0a3f899b2bd6800536",
+                "url": "https://api.github.com/repos/monii/monii-aggregate-event-storage/zipball/782860e24ff5e17c187ca9fb3756f526f75efec7",
                 "reference": "0ae3062f670eb87f7829bb0a3f899b2bd6800536",
                 "shasum": ""
             },
@@ -1087,6 +1150,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "monii/reflection-properties-serializer": 20,
         "monii/aggregate-event-storage": 20
     },
     "prefer-stable": false,
