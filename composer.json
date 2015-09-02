@@ -29,7 +29,7 @@
       "dev-master": "0.0.x-dev"
     }
   },
-  "require": {
+  "require-dev": {
     "monii/reflection-properties-serializer": "@dev"
   }
 }
