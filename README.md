@@ -1,2 +1,3 @@
-# monii-aggregate-event-storage-testing
-Testing packages for Monii's Aggregate Event Storage
+# Testing Fixtures for Depot
+
+Fixtures for testing Depot core and 3rd-party integrations/implementations.

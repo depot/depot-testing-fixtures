@@ -1,6 +1,6 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Fixtures\Blogging;
+namespace Depot\Testing\Fixtures\Blogging;
 
 class CommentId
 {

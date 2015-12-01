@@ -1,8 +1,8 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Fixtures\Banking\Account;
+namespace Depot\Testing\Fixtures\Banking\Account;
 
-class AccountBalanceIncreased
+class AccountBalanceDecreased
 {
     /**
      * @var string

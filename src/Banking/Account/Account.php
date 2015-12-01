@@ -1,8 +1,8 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Fixtures\Banking\Account;
+namespace Depot\Testing\Fixtures\Banking\Account;
 
-use Monii\AggregateEventStorage\Fixtures\Banking\Common\EventSourcedAggregate;
+use Depot\Testing\Fixtures\Banking\Common\EventSourcedAggregate;
 
 class Account extends EventSourcedAggregate
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Fixtures\Banking\Account;
+namespace Depot\Testing\Fixtures\Banking\Account;
 
 class AccountWasOpened
 {

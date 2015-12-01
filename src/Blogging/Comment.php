@@ -1,8 +1,8 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Fixtures\Blogging;
+namespace Depot\Testing\Fixtures\Blogging;
 
-use Monii\AggregateEventStorage\Fixtures\Blogging\CommentId;
+use Depot\Testing\Fixtures\Blogging\CommentId;
 
 class Comment
 {

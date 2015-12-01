@@ -1,8 +1,8 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Fixtures\Blogging;
+namespace Depot\Testing\Fixtures\Blogging;
 
-use Monii\AggregateEventStorage\Fixtures\Blogging\PostId;
+use Depot\Testing\Fixtures\Blogging\PostId;
 
 class Post
 {

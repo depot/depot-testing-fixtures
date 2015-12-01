@@ -1,6 +1,6 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Fixtures\Banking\Common;
+namespace Depot\Testing\Fixtures\Banking\Common;
 
 use Monii\AggregateEventStorage\Aggregate\Support\AggregateEventStorage;
 
