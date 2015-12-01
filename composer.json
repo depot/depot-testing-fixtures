@@ -2,6 +2,7 @@
   "name": "depot/testing-fixtures",
   "description": "Testing Fixtures for Depot",
   "license": "MIT",
+  "homepage": "http://depot.io",
   "authors": [
     {
       "name": "monii.io",
