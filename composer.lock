@@ -1,0 +1,263 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8a178743d5fb8e4d7dc04ad0cc872069",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "depot/contract",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/depot/depot-contract.git",
+                "reference": "e6fb0f9bb8cafae543a622c40df68205c5fcd8b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/depot/depot-contract/zipball/e6fb0f9bb8cafae543a622c40df68205c5fcd8b3",
+                "reference": "e6fb0f9bb8cafae543a622c40df68205c5fcd8b3",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Depot\\Contract\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "monii.io",
+                    "email": "team@monii.com"
+                },
+                {
+                    "name": "Steve Marks",
+                    "email": "steve.marks@monii.com"
+                },
+                {
+                    "name": "Alec Charlton",
+                    "email": "alec.charlton@monii.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau.simensen@monii.com"
+                }
+            ],
+            "description": "Depot Contracts",
+            "homepage": "http://depot.io",
+            "time": "2015-12-01T04:46:38+00:00"
+        },
+        {
+            "name": "depot/event-store",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/depot/depot-event-store.git",
+                "reference": "42db404f8524b84933d46d5a365a2e86e1c92f4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/depot/depot-event-store/zipball/42db404f8524b84933d46d5a365a2e86e1c92f4c",
+                "reference": "42db404f8524b84933d46d5a365a2e86e1c92f4c",
+                "shasum": ""
+            },
+            "require": {
+                "depot/contract": "^0.0@dev"
+            },
+            "require-dev": {
+                "depot/monii-reflection-properties-serializer-event-store-serialization": "^0.0@dev",
+                "depot/testing-event-store-persistence": "^0.0@dev",
+                "depot/testing-fixtures": "^0.0@dev",
+                "monii/reflection-properties-serializer": "^0.0@dev",
+                "phpunit/phpunit": "^4.7",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Depot\\EventStore\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "monii.io",
+                    "email": "team@monii.com"
+                },
+                {
+                    "name": "Steve Marks",
+                    "email": "steve.marks@monii.com"
+                },
+                {
+                    "name": "Alec Charlton",
+                    "email": "alec.charlton@monii.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau.simensen@monii.com"
+                }
+            ],
+            "description": "Depot Event Store",
+            "homepage": "http://depot.io",
+            "time": "2016-03-31T06:07:22+00:00"
+        },
+        {
+            "name": "depot/monii-reflection-properties-serializer-event-store-serialization",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/depot/depot-monii-reflection-properties-serializer-event-store-serialization.git",
+                "reference": "077f43242294d2c21e5ec796fd6c42c6f9f9ce0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/depot/depot-monii-reflection-properties-serializer-event-store-serialization/zipball/077f43242294d2c21e5ec796fd6c42c6f9f9ce0e",
+                "reference": "077f43242294d2c21e5ec796fd6c42c6f9f9ce0e",
+                "shasum": ""
+            },
+            "require": {
+                "depot/contract": "^0.0@dev",
+                "depot/event-store": "^0.0@dev",
+                "monii/reflection-properties-serializer": "^0.0@dev"
+            },
+            "require-dev": {
+                "depot/testing-fixtures": "^0.0@dev",
+                "phpunit/phpunit": "^4.7",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Depot\\EventStore\\Serialization\\Adapter\\MoniiReflectionPropertiesSerializer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "monii.io",
+                    "email": "team@monii.com"
+                },
+                {
+                    "name": "Steve Marks",
+                    "email": "steve.marks@monii.com"
+                },
+                {
+                    "name": "Alec Charlton",
+                    "email": "alec.charlton@monii.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau.simensen@monii.com"
+                }
+            ],
+            "description": "Depot Event Store Serialization using Monii's Reflection Properties Serializer",
+            "homepage": "http://depot.io",
+            "time": "2015-12-01T05:38:17+00:00"
+        },
+        {
+            "name": "monii/reflection-properties-serializer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simensen/monii-reflection-properties-serializer.git",
+                "reference": "1ec43ee64ae4715265e6612f72639d9f8964734b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simensen/monii-reflection-properties-serializer/zipball/1ec43ee64ae4715265e6612f72639d9f8964734b",
+                "reference": "1ec43ee64ae4715265e6612f72639d9f8964734b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monii\\Serialization\\ReflectionPropertiesSerializer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com"
+                },
+                {
+                    "name": "monii.io",
+                    "email": "team@monii.com"
+                },
+                {
+                    "name": "Steve Marks",
+                    "email": "steve.marks@monii.com"
+                },
+                {
+                    "name": "Alec Charlton",
+                    "email": "alec.charlton@monii.com"
+                }
+            ],
+            "description": "Reflection Properties Serializer",
+            "keywords": [
+                "properties",
+                "reflection",
+                "serializer"
+            ],
+            "time": "2015-09-02T12:58:47+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "monii/reflection-properties-serializer": 20,
+        "depot/monii-reflection-properties-serializer-event-store-serialization": 20,
+        "depot/contract": 20,
+        "depot/event-store": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

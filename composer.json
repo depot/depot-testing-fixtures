@@ -18,5 +18,11 @@
     "branch-alias": {
       "dev-master": "0.0.x-dev"
     }
+  },
+  "require-dev": {
+    "monii/reflection-properties-serializer": "^0.0@dev",
+    "depot/monii-reflection-properties-serializer-event-store-serialization": "^0.0@dev",
+    "depot/contract": "^0.0@dev",
+    "depot/event-store": "^0.0@dev"
   }
 }
