@@ -112,4 +112,12 @@ class BankingEventEnvelope implements AggregateRootChangeReading
     {
         return $this->when;
     }
+
+    public function withWhen(\DateTimeImmutable $when)
+    {
+        $instance = clone($this);
+        $instance->when = $when;
+
+        return $instance;
+    }
 }
