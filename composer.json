@@ -19,10 +19,12 @@
       "dev-master": "0.0.x-dev"
     }
   },
-  "require-dev": {
-    "monii/reflection-properties-serializer": "^0.0@dev",
+  "require": {
+    "monii/reflection-properties-serializer": "@dev",
     "depot/monii-reflection-properties-serializer-event-store-serialization": "^0.0@dev",
     "depot/contract": "^0.0@dev",
-    "depot/event-store": "^0.0@dev"
+    "depot/event-store": "^0.0@dev",
+    "depot/aggregate-root-support": "^0.0@dev",
+    "depot/aggregate-root": "^0.0@dev"
   }
 }
