@@ -2,9 +2,9 @@
 
 namespace Depot\Testing\Fixtures\Banking\Common;
 
-use Monii\AggregateEventStorage\Aggregate\Support\AggregateEventStorage;
+use Depot\AggregateRoot\Support\AggregateRootEventStorage;
 
-abstract class EventSourcedAggregate implements AggregateEventStorage
+abstract class EventSourcedAggregate implements AggregateRootEventStorage
 {
     /**
      * @var array
@@ -30,9 +30,6 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
     {
     }
 
-    /**
-     * @param object $event
-     */
     protected function recordEvent($eventId, $event)
     {
         $this->playhead++;
@@ -40,9 +37,6 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
         $this->handle($event);
     }
 
-    /**
-     * @return array
-     */
     public function clearAggregateChanges()
     {
         $this->committedEvents = array_merge(
@@ -52,17 +46,11 @@ abstract class EventSourcedAggregate implements AggregateEventStorage
         $this->recordedEvents = [];
     }
 
-    /**
-     * @return array
-     */
     public function getAggregateChanges()
     {
         return $this->recordedEvents;
     }
 
-    /**
-     * @return string
-     */
     abstract public function getAggregateIdentity();
 
     public function getAggregateVersion()

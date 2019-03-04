@@ -2,8 +2,6 @@
 
 namespace Depot\Testing\Fixtures\Blogging;
 
-use Depot\Testing\Fixtures\Blogging\PostId;
-
 class Post
 {
     /**

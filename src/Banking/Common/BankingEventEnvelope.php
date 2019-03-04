@@ -3,9 +3,9 @@
 namespace Depot\Testing\Fixtures\Banking\Common;
 
 use DateTimeImmutable;
-use Monii\AggregateEventStorage\Aggregate\Support\ChangeReading\AggregateChangeReading;
+use Depot\AggregateRoot\Support\ChangeReading\AggregateRootChangeReading;
 
-class BankingEventEnvelope implements AggregateChangeReading
+class BankingEventEnvelope implements AggregateRootChangeReading
 {
     /**
      * @var object
