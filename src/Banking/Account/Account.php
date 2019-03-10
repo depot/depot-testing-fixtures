@@ -53,7 +53,7 @@ class Account extends EventSourcedAggregate
     /**
      * @return string
      */
-    public function getAggregateIdentity()
+    public function getAggregateRootIdentity()
     {
         return $this->accountId;
     }
