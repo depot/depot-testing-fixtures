@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/depot/depot-aggregate-root-support.git",
-                "reference": "f195dee8b33da994f61052aad0774b46262d2e26"
+                "reference": "61ad8852fc562b482d4358c0b7c1dbddf09a8001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/depot/depot-aggregate-root-support/zipball/f195dee8b33da994f61052aad0774b46262d2e26",
-                "reference": "f195dee8b33da994f61052aad0774b46262d2e26",
+                "url": "https://api.github.com/repos/depot/depot-aggregate-root-support/zipball/61ad8852fc562b482d4358c0b7c1dbddf09a8001",
+                "reference": "61ad8852fc562b482d4358c0b7c1dbddf09a8001",
                 "shasum": ""
             },
             "require": {
@@ -106,7 +106,7 @@
             ],
             "description": "Depot Support Implementation for Aggregate Roots",
             "homepage": "http://depot.io",
-            "time": "2019-03-04T22:40:46+00:00"
+            "time": "2019-03-10T00:56:04+00:00"
         },
         {
             "name": "depot/contract",

@@ -3,9 +3,9 @@
 namespace Depot\Testing\Fixtures\Banking\Common;
 
 use DateTimeImmutable;
-use Depot\AggregateRoot\Support\ChangeReading\AggregateRootChangeReading;
+use Depot\AggregateRoot\Support\Change\Change;
 
-class BankingEventEnvelope implements AggregateRootChangeReading
+class BankingEventEnvelope implements Change
 {
     /**
      * @var object
@@ -46,7 +46,7 @@ class BankingEventEnvelope implements AggregateRootChangeReading
         return new self($eventId, $event, $when, $metadata, $version);
     }
 
-    public static function instantiateAggregateChangeFromEventAndMetadata(
+    public static function instantiateChangeFromEventAndMetadata(
         $eventId,
         $event,
         $when = null,
@@ -57,58 +57,37 @@ class BankingEventEnvelope implements AggregateRootChangeReading
         return new self($eventId, $event, $when, $metadata, $version);
     }
 
-    /**
-     * @return object
-     */
-    public function getAggregateEvent()
+    public function getAggregateRootEvent()
     {
         return $this->event;
     }
 
-    /**
-     * @return object
-     */
-    public function getAggregateMetadata()
+    public function getAggregateRootMetadata()
     {
         return $this->metadata;
     }
 
-    /**
-     * @return object
-     */
-    public function getCanReadAggregateEventId()
+    public function getCanReadAggregateRootEventId()
     {
         return true;
     }
 
-    /**
-     * @return object
-     */
-    public function getAggregateEventId()
+    public function getAggregateRootEventId()
     {
         return $this->eventId;
     }
 
-    /**
-     * @return bool
-     */
-    public function getCanReadAggregateEventVersion()
+    public function getCanReadAggregateRootEventVersion()
     {
         return true;
     }
 
-    /**
-     * @return object
-     */
-    public function getAggregateEventVersion()
+    public function getAggregateRootEventVersion()
     {
         return $this->version;
     }
 
-    /**
-     * @return DateTimeImmutable
-     */
-    public function getAggregateEventWhen()
+    public function getAggregateRootEventWhen()
     {
         return $this->when;
     }

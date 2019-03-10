@@ -2,9 +2,9 @@
 
 namespace Depot\Testing\Fixtures\Banking\Common;
 
-use Depot\AggregateRoot\Support\AggregateRootEventStorage;
+use Depot\AggregateRoot\Support\AggregateRoot\AggregateRoot;
 
-abstract class EventSourcedAggregate implements AggregateRootEventStorage
+abstract class EventSourcedAggregate implements AggregateRoot
 {
     /**
      * @var array
@@ -37,7 +37,7 @@ abstract class EventSourcedAggregate implements AggregateRootEventStorage
         $this->handle($event);
     }
 
-    public function clearAggregateChanges()
+    public function clearAggregateRootChanges()
     {
         $this->committedEvents = array_merge(
             $this->committedEvents,
@@ -46,24 +46,19 @@ abstract class EventSourcedAggregate implements AggregateRootEventStorage
         $this->recordedEvents = [];
     }
 
-    public function getAggregateChanges()
+    public function getAggregateRootChanges()
     {
         return $this->recordedEvents;
     }
 
-    abstract public function getAggregateIdentity();
+    abstract public function getAggregateRootIdentity();
 
-    public function getAggregateVersion()
+    public function getAggregateRootVersion()
     {
         return $this->playhead;
     }
 
-    /**
-     * @param array|BankingEventEnvelope[] $events
-     *
-     * @return void
-     */
-    public function reconstituteAggregateFrom(array $events)
+    public function reconstituteAggregateRootFrom(array $events)
     {
         foreach ($events as $event) {
             $this->playhead++;
@@ -93,10 +88,7 @@ abstract class EventSourcedAggregate implements AggregateRootEventStorage
         return 'apply' . end($classParts);
     }
 
-    /**
-     * @return static
-     */
-    public static function instantiateAggregateForReconstitution()
+    public static function instantiateAggregateRootForReconstitution()
     {
         return new static();
     }
