@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1bf8c5d90f3c20b3ae9a06a5dc7fbf1",
+    "content-hash": "f89f00b458d789fc1bf5cc07a946510b",
     "packages": [
         {
             "name": "depot/aggregate-root",
@@ -57,56 +57,6 @@
             "description": "Depot Support for Aggregate Roots",
             "homepage": "http://depot.io",
             "time": "2019-03-04T23:10:01+00:00"
-        },
-        {
-            "name": "depot/aggregate-root-support",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/depot/depot-aggregate-root-support.git",
-                "reference": "3d284d84da2f7d3a7c408b27fcd8e49042f6af07"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/depot/depot-aggregate-root-support/zipball/3d284d84da2f7d3a7c408b27fcd8e49042f6af07",
-                "reference": "3d284d84da2f7d3a7c408b27fcd8e49042f6af07",
-                "shasum": ""
-            },
-            "require": {
-                "depot/aggregate-root": "^0.0@dev",
-                "depot/contract": "^0.0@dev",
-                "depot/event-store": "^0.0@dev",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "depot/testing-fixtures": "^0.0@dev",
-                "phpunit/phpunit": "^6.5",
-                "squizlabs/php_codesniffer": "^2.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Depot\\AggregateRoot\\Support\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Beau Simensen",
-                    "email": "beau@dflydev.com"
-                }
-            ],
-            "description": "Depot Support Implementation for Aggregate Roots",
-            "homepage": "http://depot.io",
-            "time": "2019-03-10T01:04:07+00:00"
         },
         {
             "name": "depot/contract",
@@ -357,7 +307,6 @@
         "depot/monii-reflection-properties-serializer-event-store-serialization": 20,
         "depot/contract": 20,
         "depot/event-store": 20,
-        "depot/aggregate-root-support": 20,
         "depot/aggregate-root": 20
     },
     "prefer-stable": false,
