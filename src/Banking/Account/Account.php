@@ -2,9 +2,9 @@
 
 namespace Depot\Testing\Fixtures\Banking\Account;
 
-use Depot\Testing\Fixtures\Banking\Common\EventSourcedAggregate;
+use Depot\Testing\Fixtures\Banking\Common\EventSourcedAggregateRoot;
 
-class Account extends EventSourcedAggregate
+class Account extends EventSourcedAggregateRoot
 {
     /**
      * @var string

@@ -4,7 +4,7 @@ namespace Depot\Testing\Fixtures\Banking\Common;
 
 use Depot\AggregateRoot\Support\AggregateRoot\AggregateRoot;
 
-abstract class EventSourcedAggregate implements AggregateRoot
+abstract class EventSourcedAggregateRoot implements AggregateRoot
 {
     /**
      * @var array
@@ -68,7 +68,7 @@ abstract class EventSourcedAggregate implements AggregateRoot
 
             $this->committedEvents[] = $event;
 
-            $this->handle($event->getAggregateEvent());
+            $this->handle($event->getAggregateRootEvent());
         }
     }
 
